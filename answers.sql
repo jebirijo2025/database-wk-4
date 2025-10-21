@@ -1,3 +1,4 @@
+USE sales_db; 
 -- 1️ Show the total payment amount for each payment date
 --    Display payment date and total amount, sorted by date (descending) and show only top 5 latest dates
 SELECT paymentDate, SUM(amount) AS total_amount
@@ -24,4 +25,5 @@ GROUP BY productCode, quantityOrdered;
 --    Display check number and the highest amount paid for that check number
 SELECT checkNumber, MAX(amount) AS highest_amount
 FROM payments
+
 GROUP BY checkNumber;
